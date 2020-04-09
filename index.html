@@ -1,12 +1,111 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-Hans-CN">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>StarUDream</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comic%20Neue:300,300italic,400,400italic,700,700italic">
+  <style>
+    body {
+      font-family: 'Comic Neue', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+      font-size: calc(10px + 0.33vw);
+      -webkit-font-smoothing: antialiased;
+      padding: 5vh 10vw;
+      color: #121314;
+    }
+
+    h1 {
+      font-size: 4.5em;
+      font-weight: 500;
+      margin-bottom: 0;
+    }
+
+    p {
+      font-size: 1.6em;
+      font-weight: 300;
+      line-height: 1.6;
+      max-width: 26em;
+    }
+
+    a {
+      text-decoration: none;
+      color: #121314;
+      position: relative;
+    }
+
+    a:after {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      top: 60%;
+      left: -0.1em;
+      right: -0.1em;
+      bottom: 0;
+      transition: top 200ms cubic-bezier(0, 0.8, 0.13, 1);
+      background-color: rgba(100, 150, 195, 0.5);
+    }
+
+    a:hover:after {
+      top: 0;
+    }
+
+    .p1 {
+      font-weight: 500;
+      font-size: 2.2em;
+    }
+
+    .beian {
+      font-size: 1em;
+      margin-top: 100px;
+    }
+  </style>
 </head>
 <body>
-Hello
+<h1>Hello</h1>
+<p class="p1">
+  我叫 王晟
+</p>
+<p>
+  于 2019 年毕业于
+  <a href="http://www.just.edu.cn" rel="nofollow" target="_blank">江苏科技大学</a>，目前居住于 中国
+  <a href="https://www.google.com/maps/place/Shanghai,+China" rel="nofollow" target="_blank">上海</a>。
+</p>
+<p>
+  从事 <a href="#">软件开发</a> 工作，目前主要使用语言为
+  <a href="https://golang.org" rel="nofollow" target="_blank">GoLang</a>，同样熟悉
+  <a href="https://java.com" rel="nofollow" target="_blank">Java</a>、
+  <a href="https://nodejs.org" rel="nofollow" target="_blank">Node.js</a> 等。
+</p>
+<p>
+  爱好 游戏，专注于
+  <a href="https://store.steampowered.com" rel="nofollow" target="_blank">Steam</a>、
+  <a href="https://www.origin.com" rel="nofollow" target="_blank">Origin</a>、
+  <a href="https://www.playstation.com" rel="nofollow" target="_blank">PS4</a> 平台。
+</p>
+<p>
+  最后，您可以通过
+  <a href="mailto:justwangsheng@gmail.com" rel="nofollow" target="_blank">E-Mail</a>、
+  <a href="https://github.com/starudream" rel="nofollow" target="_blank">GitHub</a>、
+  <a href="https://weibo.com/StarUDream" rel="nofollow" target="_blank">WeiBo</a>、
+  <a href="https://t.me/wangsheng" rel="nofollow" target="_blank">Telegram</a> 联系我。
+</p>
+<p class="beian">
+  &copy; 2020 StarUDream.
+  <a id="beian" href="http://www.beian.miit.gov.cn" rel="nofollow" target="_blank">苏ICP备13004352号</a>
+</p>
 </body>
+<script type="text/javascript">
+  var beian_list = {
+    '52xckl.cn': '苏ICP备13004352号-2',
+    'starudream.cn': '苏ICP备13004352号-4'
+  };
+  var beian = document.getElementById('beian');
+  for (var v in beian_list) {
+    if (document.domain.indexOf(v) > -1) {
+      beian.innerText = beian_list[v];
+      break;
+    }
+  }
+</script>
 </html>
